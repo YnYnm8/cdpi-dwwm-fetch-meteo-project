@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meteo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-    <main>
 
-    </main>
+<body>
+    <template id="template-city">
+        <div class="city-card">
+            <span class="city-name"></span>, <span class="country-name"></span>
+        </div>
+    </template>
+
+    <template id="template-meteo">
+        <div class="weather-card">
+            <div class="wcity-name"></div>
+            <div class="temperature"></div>
+            <div class="meteo"></div>
+            <i class="weather-icon fa-solid"></i>
+            <!-- <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-droplet"></i>
+            <i class="fa-solid fa-cloud"></i>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <i class="fa-solid fa-cloud-bolt"></i> -->
+        </div>
+
+    </template>
+
+
+    <div class="research">
+
+        <form class="citySearch">
+            <input class="nameOfCity" type="text" name="city" id="city" placeholder="Nom de ville">
+            <i class="fas fa-search"></i><button class="citySubmit">Search</button>
+        </form>
+
+        <form class="coords-search">
+            <input class=input-lat type="text" id="search-lat" placeholder="Latitude"> <input class="input-lon"
+                type="text" id="search-long" placeholder="Longtitude">
+            <i class="fas fa-search"></i>
+            <button>Search</button>
+        </form>
+    </div>
+
+    <div class="city-list"></div>
+
+    <div class="weather-list"></div>
+    <div class="chez-toi">
+        <p>Chez Toi?</p><button class="chez-toi-submit"><i class="fas fa-search"></i></button>
+    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>
